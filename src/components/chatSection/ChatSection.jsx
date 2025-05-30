@@ -22,6 +22,7 @@ const ChatSection = () => {
 
   async function loadPrevPrompt(prompt) {
     sent(prompt)
+    closeMenu()
   }
   // console.log("input value",input);
   return (
@@ -69,7 +70,7 @@ const ChatSection = () => {
         <div className='close absolute right-6 top-6 ' onClick={closeMenu}>
           <MdOutlineCloseFullscreen className='cursor-pointer   text-2xl'/>
         </div>
-        <div className="new " onClick={() => { newChat() }}>
+        <div className="new " onClick={() => { newChat() ,closeMenu() }}>
           <FaPlus className='plusIcon' />
           <p>New Chat</p>
         </div>
@@ -77,7 +78,7 @@ const ChatSection = () => {
           <p className="recentTitle">Recent</p>
           {prevPrompt.map((item, index) => {
             return (
-              <div className="eachPart" key={index} onClick={() => { loadPrevPrompt(item) }}>
+              <div className="eachPart" key={index} onClick={() => { loadPrevPrompt(item) }} >
                 <FaRegMessage />
                 <p>{(item.length < 15) ? item : (item.slice(0, 18) + "...")}</p>
               </div>
