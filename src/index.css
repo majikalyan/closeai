@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#root{
+  display: flex;
+}
+.lightmode{
+  --color:rgb(30, 28, 28);
+  --background-color: white;
+  --bg-sep:rgb(30, 28, 28);
+  --btn-background-color:rgb(30, 28, 28);
+  --btn-color:white;
+  --btn-hover:rgb(93, 92, 92);
+  --side-hover:rgb(93, 92, 92);
+  --place:white;
+  --back:rgb(41, 42, 42);
+  --sidecol:white;
+}
+.darkmode{
+  --color:white;
+  --background-color: rgb(32, 38, 38);
+  --bg-sep:rgb(158, 206, 248);
+  --btn-background-color:white;
+  --btn-color:rgb(32, 38, 38);
+  --btn-hover:rgb(97, 98, 99);
+  --side-hover:rgb(66, 71, 74);
+  --place:rgb(20, 20, 20);
+  --back:rgb(74, 73, 73);
+  --sidecol:white;
+}

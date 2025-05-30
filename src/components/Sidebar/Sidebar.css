@@ -1,0 +1,83 @@
+.sidebar {
+    /* width: 16%; */
+    padding: 20px 20px;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+    /* overflow: auto; */
+    /* scrollbar-width: none; */
+}
+
+.sidebar svg {
+    width: 30px;
+    height: 30px;
+    color: var(--color);
+}
+
+#menu {
+    /* margin-left: 10px; */
+    cursor: pointer;
+}
+
+.sidebar .newchat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(107, 116, 124);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar .recentchat {
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    overflow: auto;
+}
+
+.sidebar .recentchat .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* .recentchat .message{
+    width: 20px;
+    height: 20px;
+} */
+.sidebar .recentchat .recent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 16px;
+    /* width: 100%; */
+    /* overflow: auto; */
+}
+.recent:hover {
+    background-color: var(--side-hover);
+}
+
+.newchat:hover {
+    background-color: var(--side-hover);
+}
+@media (max-width:767px) {
+    .sidebar{
+        display: none;
+    }
+}
