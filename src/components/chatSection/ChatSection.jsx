@@ -58,7 +58,7 @@ const ChatSection = () => {
         }
       </div>
       <div className="bottomsection">
-        <input onChange={(e) => setInput(e.target.value)} type="text" placeholder='Enter your prompt' value={input} />
+        <input onChange={(e) => setInput(e.target.value)} type="text" placeholder='Ask anything' value={input} />
         {
           input ? <button type='submit' className='sentbtn' onClick={() => { sent(input) }}><LuSend /></button> : null
         }

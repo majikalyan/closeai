@@ -128,10 +128,9 @@
 
 .aibox p {
     overflow: auto;
-    width: 100%;
+    max-width: 85%;
     height: 420px;
     scrollbar-width: none;
-
 }
 
 .result {
@@ -143,7 +142,7 @@
     width: 65%;
     height: 100%;
     /* padding: 20px 20px; */
-    font-size: 16px;
+    font-size: 15px;
     /* background-color: aqua; */
     margin: 0 auto;
 }
@@ -234,11 +233,11 @@
 
 @media (max-width:767px) {
     ::placeholder {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     input[type="text"] {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .navSection .logo {
@@ -251,7 +250,7 @@
 
     .result {
         width: 91%;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .navSection {
@@ -283,9 +282,13 @@
     .aibox {
         gap: 10px;
     }
+    .aibox{
+        margin-top: 10px;
+    }
 
     .aibox p {
-        height: 420px;
+        height: 60vh;
+        max-width: 80%;
     }
 
     .navSection .menuIcon {

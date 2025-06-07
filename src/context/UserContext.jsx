@@ -10,18 +10,18 @@ const UserContext = (props) => {
     const [recentPrompt, setRecentPrompt] = useState("")
     const [prevPrompt, setPrevPrompt] = useState([])
 
-    const newChat=()=>{
+    const newChat = () => {
         setShowResult(false);
         setLoading(false);
     }
 
     // console.log("props value",props);
-    // const delayPara = (index, nextWord) => {
-    //     setTimeout(() => {
-    //         setResultData(prev=>prev+nextWord)
+    const delayPara = (index, nextWord) => {
+        setTimeout(function () {
+            setResultData(prev => prev + nextWord)
 
-    //     }, 75*index);
-    // }
+        }, 75 * index);
+    }
 
     async function sent(input) {
         setResultData("")
@@ -30,16 +30,15 @@ const UserContext = (props) => {
         setLoading(true)
         setPrevPrompt(prev => [...prev, input])
         let response = await run(input)
-        let responseArray = (response.split("**") && response.split("*") )
-        /*
-        let newResponseArray=responseArray?.split(" ")
-        for(let i=0;i<newResponseArray.length;i++){
-            const nextWord=newResponseArray[i];
-            delayPara(i,nextWord + " ")
+        let responseArray = (response.split("**") && response.split("*"))
+        // let newResponseArray = responseArray.split(" ")
+        for (let i = 0; i < responseArray.length; i++) {
+            const nextWord = responseArray[i]
+            delayPara(i, nextWord)
         }
 
-        */
-        setResultData(responseArray)
+
+        // setResultData(responseArray)
         setLoading(false)
         setInput("")
     }
